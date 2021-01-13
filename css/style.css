@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.showcase{
+    
+    height: 100vh;
+    width: 100%;
+    background: url('../img/showcase.jpg') no-repeat center center/cover;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+.overlay{
+    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1;
+    background: radial-gradient(at center center,#153243 0%,#1A6C7A 100%);
+    opacity:0.5;
+    overflow: hidden;
+    
+}
+
+.hero{
+     overflow-x: hidden;
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     z-index: 100;
+     overflow: hidden;
+     /* max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto; */
+    /* background-color: lightcoral; */
+ }
+
+ header{
+     width: 100%;
+     height: 15vh;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .navLinks{
+     display: flex;
+     list-style: none;
+     align-items: center;
+
+ }
+ .navLinks li{
+     margin-right: 2rem;
+ }
+ .navLinks li a{
+     list-style: none;
+     color: rgb(233, 230, 230);
+     font-weight: 400;
+     text-decoration: none;
+     font-size: 16px;
+ }
+
+ .navLinks li a:hover{
+     color: white;
+ }
+
+ .btn{
+     display: inline-block;
+     color: white !important;
+     font-weight: 600 !important;
+     padding: 16px 40px;
+     background: #1a6c7a !important;
+     font-size: 12px !important;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     text-decoration: none;
+     border: 2px solid rgba(0,104,122,0.7);
+     transition: all 0.3s ease;
+ }
+
+ .btn:hover{
+     background: #1d7888 !important;
+ }
+ 
+ .max-width{
+     max-width: 1200px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .btn-container{
+     display: flex;
+     /* background: lightcoral; */
+     margin: auto;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
+ 
+
+.hero-content{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content h2{
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.hero-content h1{
+    font-size: 4rem;
+    font-weight: 500 !important;
+    margin-bottom: 1rem;
+}
+.hero-content p{
+    font-size: 1rem;
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+}
+
+.btn-tra{
+    background: transparent  !important;
+    border-color: white;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+
+}
+
+.btn-light{
+    background: white !important;
+    color: black !important;
+    border: transparent;
+    margin: 0 1rem;
+    transition: all 0.3s ease;    
+}
+
+.btn-tra:hover{
+    border-color:rgba(0,104,122,0.7) ;
+}
+
+.btn-light:hover{
+    color: white !important;
+}
+
+.burger{
+    padding: 1rem 1.2rem;
+    background: #1a6c7a;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.burger .fa-bars{
+    color: white;
+}
+
+.image-container{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    /* background: lightcoral; */
+    
+
+}
+
+.services{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.service-box{
+    height: 320px;
+    width: 370px;
+    position: relative;
+    cursor: pointer;
+}
+.service-box:hover > .box-overlay{
+    background-color: #1A6C7A;
+}
+.box-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    opacity: 0.3;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.box-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    color: white;
+}
+.box-text h2{
+    letter-spacing: 1.8px;
+    text-transform: lowercase;
+    font-size: 2.1rem;
+}
+
+.box1{
+    background: url('../img/ser1.jpg')no-repeat center center/cover;
+
+}
+
+
+.box2{
+    background: url('../img/serv3.jpg')no-repeat center center/cover;
+
+}
+
+.box3{
+    background: url('../img/serv2.jpg')no-repeat center center/cover;
+
+}
+
+
+@media(max-width:780px){
+    .burger{
+        display:block;
+    }
+    .navLinks{
+        /* display: none; */
+        position: absolute;
+        top: 13vh;
+        left: 0;
+        background: white;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        z-index: 100;
+        justify-content: space-evenly;
+        display: none;
+    }
+    .navLinks.show{
+        display: block;
+    }
+    
+    .navLinks li{
+        border-bottom: 1px solid black;
+        width: 100%;
+        /* text-align: center; */
+        padding: 1.1rem;
+
+    }
+    .navLinks li a{
+        padding: 0.5rem;
+        color: black;
+    }
+    .navLinks li .btn{
+        background: transparent !important;
+        color: black !important;
+        border: none;
+        font-weight: normal !important;
+        text-transform: capitalize !important;
+        font-size: 16px !important;
+        letter-spacing: 1px !important;
+        padding: 0 0.5rem;
+    }
+    .logo{
+        padding-left: 1rem;
+    }
+    .logo img{
+        height: 100px;
+        width: 160px;
+        object-fit: contain;
+        /* background: lightcoral; */
+    }
+    .hero-content{
+        width: 100%;
+        padding: 1rem;
+        /* background-color: lightcoral; */
+    }
+    .hero-content h2{
+        font-size: 1.6rem;
+    }
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+    .hero-content p{
+        font-size: 16px;
+    }
+    .btn{
+        padding: 14px 30px;
+    }
+
+    .showcase{
+        height: 80vh;
+        width: 100%;
+    }
+    .overlay{
+        height: 80vh;
+        width: 100%;
+    }
+    .hero{
+        height: 80vh;
+        width: 100%;
+    }
+    .hero-content{
+        top: 60%;
+        width: 100%;
+    }
+    .btn-container{
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .btn-tra{
+        margin: 1rem 0;
+    }
+    
+    .btn-light{
+        margin: 1rem 0;
+    }
+    .image-container{
+        flex-direction: column;
+        height: auto;
+    }
+    .service-box{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:1rem ;
+        width: 300px;
+
+    }
+    
+}
