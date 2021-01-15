@@ -7,6 +7,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .showcase{
     
     height: 100vh;
@@ -170,7 +174,7 @@
 }
 
 .image-container{
-    padding-top: 2rem;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
     /* background: lightcoral; */
@@ -188,6 +192,7 @@
     width: 370px;
     position: relative;
     cursor: pointer;
+  
 }
 .service-box:hover > .box-overlay{
     background-color: #1A6C7A;
@@ -237,6 +242,207 @@
 
 }
 
+.services-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+    height: 400px;
+}
+
+.service-title{
+    /* background: lightcoral; */
+}
+.service-title h1{
+    font-weight: 500;
+    font-size: 1.6rem;
+    
+}
+
+.service-para{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.service-para p{
+    line-height: 1.5rem;
+}
+
+.srs-btn{
+    display: inline-block;
+    background-color: lightcoral;
+    height: auto;
+    width: 170px;
+    padding: 14px 30px;
+    border: 2px solid #1A6C7A;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: #1A6C7A;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+.srs-btn:hover{
+    background: #1A6C7A;
+    color: white;
+}
+
+.action{
+    height: 500px;
+    background: url('../img/action.jpg')no-repeat center center/cover;
+    position: relative;
+}
+
+.action-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #1A6C7A;
+    opacity: 0.7;
+}
+.action-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+.action-content h1{
+    margin: 2rem;
+    font-size: 2rem;
+    font-style: italic;
+}
+.action-content p{
+    max-width: 500px;
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+}
+.action .btn{
+    background: transparent !important;
+    border: 2px solid white !important;
+    color: white !important;
+    margin-top: 1rem !important;
+}
+.action .btn:hover{
+    background: #fff !important;
+    color: black !important;
+}
+
+.contact{
+    height: auto;
+    padding: 2rem 0;
+}
+
+.contact-container{
+    height: 200px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.contact-a{
+    height: 100%;
+    width: 100%;
+    /* background: lightblue; */
+
+}
+.contact-a img{
+    margin-bottom: 1rem;
+}
+.contact-a h3{
+    color: #1a6c7a;
+    max-width: 300px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.contact-b{
+    height: 100%;
+    width: 100%;
+    /* background: lightcoral; */
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.s-btn{
+    height: 40px;
+    width: 40px;
+    background: rgb(228, 227, 227);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.s-btn .fa{
+    color: #1A6C7A !important;
+}
+
+.contact-about h3,.contact-connect h3{
+    margin-bottom: 1rem;
+}
+.contact-about ul,.contact-connect ul{
+ list-style: none;
+}
+
+.contact-about ul li,.contact-connect ul li{
+     margin-bottom: 10px;
+     font-weight: 300;
+     color: #306CA1;
+}
+
+.contact-connect{
+
+}
+
+
+
+@media(max-width:980px){
+    .service-box{
+        width: 90% !important;
+    }
+    
+    
+}
+
+
+.gallery{
+    height: auto;
+    padding: 2rem 0;
+    /* background: rgb(190, 226, 238); */
+}
+.gallery img{
+    width: 100%;
+}
+.img-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 2rem 0;
+}
+.img-box{
+    height: 280px;
+    width: 390px;
+    
+}
+.img-box img{
+    height: 100%;
+    width: 100%;
+}
 
 @media(max-width:780px){
     .burger{
@@ -269,6 +475,9 @@
     .navLinks li a{
         padding: 0.5rem;
         color: black;
+    }
+    .navLinks li a:hover{
+        color: #1A6C7A !important;
     }
     .navLinks li .btn{
         background: transparent !important;
@@ -308,15 +517,15 @@
     }
 
     .showcase{
-        height: 80vh;
+        height: 100vh;
         width: 100%;
     }
     .overlay{
-        height: 80vh;
+        height: 100vh;
         width: 100%;
     }
     .hero{
-        height: 80vh;
+        height: 100vh;
         width: 100%;
     }
     .hero-content{
@@ -342,8 +551,45 @@
         margin-left: auto;
         margin-right: auto;
         margin-top:1rem ;
-        width: 300px;
-
+        width: 90%;
     }
+    .services-text{
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 1rem;
+        gap: 0.7rem !important;
+    }
+    .service-para{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .action-content{
+        padding: 1rem;
+    }
+    .img-container{
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .img-box{
+        width:90% ;
+        height: 400px;
+    }
+    .contact-container{
+        grid-template-columns: 1fr;
+        padding-left: 2rem;
+        gap: 1rem;
+    }
+  .contact-b h3{
+    font-size: 1.3rem;
     
+  }
+  .contact-about,.contact-connect{
+      padding-right: 1rem;
+    
+  }
+  
+    
+    .contact-b{
+        justify-content: flex-start;
+    }
 }
